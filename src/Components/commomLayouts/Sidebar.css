@@ -1,0 +1,82 @@
+/* Sidebar - Initially Hidden */
+.user-sidebar {
+    position: fixed;
+    left: -250px; /* Hidden by default */
+    top: 0;
+    width: 250px; /* Fixed width */
+    height: 100vh; /* Full height */
+    background: linear-gradient(to bottom, #008080, #015760);
+    color: white;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1101; /* Ensures it appears above the navbar */
+    padding-top: 60px; /* Prevents overlap with navbar */
+    margin-top: 0%;
+}
+
+/* Sidebar Opens */
+.user-sidebar.open {
+    left: 0;
+}
+
+/* Sidebar Header */
+.user-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: #015760;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 22px;
+}
+
+/* Close Button */
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 40px;
+    margin: 0px 50px 0px 0px;
+    padding: 0;
+}
+
+.close-button:hover {
+    color: #ff4d4d;
+    background-color: transparent;
+}
+
+/* Sidebar Menu */
+.user-sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Sidebar Menu Items */
+.user-sidebar-menu li {
+    padding: 15px 20px;
+    height: 24px;
+    /* background-color: #095858; */
+    transition: background 0.3s;
+    background: linear-gradient(to bottom, #015760, #018383);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+}
+
+/* Menu Links */
+.user-sidebar-menu li .li-item {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+/* Hover Effect */
+.user-sidebar-menu li:hover {
+    background-color: #036d62 !important;
+    cursor: pointer;
+}

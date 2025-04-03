@@ -1,0 +1,15 @@
+.admin-footer {
+    margin: 40px 0px 0px 260px; /* Adjust according to sidebar width */
+    padding: 15px;
+    background-color: #c1c1c18a;
+    text-align: center;
+    font-size: 14px;
+    color: #6b6b6b;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+    .admin-footer {
+        margin-left: 0;
+    }
+}

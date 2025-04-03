@@ -1,0 +1,21 @@
+/* Ensure full-page layout */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Content container (Sidebar + Main Content) */
+.content {
+    display: flex;
+    flex: 1;
+    margin-top: 70px; /* Push content below fixed navbar */
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    min-height: calc(100vh - 120px); /* Full height minus navbar & footer */
+    overflow-y: auto;
+}
