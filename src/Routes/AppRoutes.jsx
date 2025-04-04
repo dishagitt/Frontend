@@ -13,16 +13,18 @@ const AppRouter = () => {
   return (
       <Routes>
 
+        <Route path="/" element={<Navigate to="/login" />} />
+
         {/*  -------- User Routes -------- */}
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
        {/* Routes that use MainLayout (With Sidebar/Navbar/Footer) */}
-       <Route path="/" element={<MainLayout />}>
+       <Route path="/app" element={<MainLayout />}>
            {/* Protected User Home page Route */}
         <Route
-          path="/home"
+          path="/app/home"
           element={isAuthenticated ? <Home /> : <Navigate to="/login" />}
         />
           {/* <Route path="profile" element={<Profile />} /> */}
@@ -36,16 +38,16 @@ const AppRouter = () => {
 
         {/*  -------- Admin Routes -------- */}
 
-        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin" element={<AdminLogin />} />
 
 
-        <Route path="/" element={<AdminLayout />}>
+        <Route path="/admin/app" element={<AdminLayout />}>
            {/* Protected User Home page Route */}
         <Route
-          path="/admin/dashboard"
+          path="/admin/app/dashboard"
           element={isAuthenticated ? 
           <AdminDashboard /> : 
-          <Navigate to="/admin/login" />}
+          <Navigate to="/admin" />}
         />
           {/* <Route path="profile" element={<Profile />} /> */}
         </Route>

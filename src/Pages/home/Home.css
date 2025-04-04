@@ -1,5 +1,135 @@
-.home-container {
-    margin-top: 80px; /* Adjust based on your navbar's height */
-    padding: 20px;
+.user-home-container {
+  margin: 120px 30px 60px 30px; /* leaves space for navbar, footer, and sidebar */
+  padding: 20px;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+/* ==== Updates Section ==== */
+.updates-section {
+  background-color: #e7f0ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.updates-section h2 {
+  font-size: 28px;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 1px solid #b5b5b5;
+}
+
+.updates-section ul {
+  padding-left: 50px;
+}
+
+.updates-section li {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.updates-section span {
+  color: #666;
+  font-size: 14px;
+}
+
+/* ==== Winners Section ==== */
+.winners-section {
+  background-color: #fff4ec;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.winners-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid #b5b5b5;
+
+}
+
+.winner-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.winner-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 260px;
+  height: 280px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.winner-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  /* aspect-ratio: 4 / 3; */
+}
+
+.winner-card h4 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #111;
+}
+
+.winner-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .winner-cards {
+    justify-content: space-around; /* Adjust spacing */
   }
-  
+}
+
+@media (max-width: 1024px) {
+  .winner-cards {
+    justify-content: center; /* Ensure proper alignment */
+  }
+  .winner-card {
+   width: 260px;
+   height: 280px;
+  }
+}
+
+@media (max-width: 900px) {
+  .winner-card {
+    width: 260px;
+    height: 280px;
+  }
+  .winner-cards {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .winner-cards {
+    flex-wrap: wrap;
+  }
+  .winner-card {
+    width: 260px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 550px) {
+  .winner-cards {
+    flex-direction: column;
+    align-items: center; /* Center single column */
+  }
+}

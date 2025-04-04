@@ -27,6 +27,10 @@
 //     dispatch(registerUser({ ...formData, navigate }));
 //   };
 
+// const redirectToLogin = () =>{
+//   navigate("/login");
+// }
+
 //   return (
 //     <div className="register-container">
 //       <form className="register-form" onSubmit={handleSubmit}>
@@ -52,6 +56,7 @@
 //         <button type="submit" disabled={loading}>
 //           {loading ? "Registering..." : "Register"}
 //         </button>
+{/* <p>already have an account.<span onClick={redirectToLogin}> Login here!</span></p> */}
 //       </form>
 //     </div>
 //   );
@@ -75,7 +80,9 @@ const Register = () => {
     userType: "team leader", // Default selection
   });
 
-
+const redirectToLogin = () =>{
+  navigate("/login");
+}
 
 //   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -89,7 +96,7 @@ const Register = () => {
     e.preventDefault();
     
     console.log(formData);
-    navigate("/home"); // Redirect to dashboard
+    navigate("/app/home"); // Redirect to dashboard
    
   }
   return (
@@ -117,6 +124,7 @@ const Register = () => {
         <button type="submit">
           Register
         </button>
+        <p>already have an account.<span onClick={redirectToLogin}> Login here!</span></p>
       </form>
     </div>
   );

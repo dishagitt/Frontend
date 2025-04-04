@@ -14,7 +14,7 @@ const AdminLogin = () => {
     // Dummy authentication (Replace with real API call)
     if (email === "admin@gmail.com" && password === "admin123") {
       localStorage.setItem("isAdminAuthenticated", "true");
-      navigate("/admin/dashboard"); // Redirect to dashboard
+      navigate("/admin/app/dashboard"); // Redirect to dashboard
     } else {
       setError("Invalid email or password");
     }

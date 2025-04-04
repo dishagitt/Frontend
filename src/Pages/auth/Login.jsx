@@ -17,6 +17,10 @@
 //     dispatch(loginUser({ email, password, navigate }));
 //   };
 
+// const redirectToRegister =() => {
+//   navigate("/register"); // Redirect to register page
+// }
+
 //   return (
 //     <div className="login-container">
 //       <form className="login-form" onSubmit={handleSubmit}>
@@ -39,6 +43,7 @@
 //         <button type="submit" disabled={loading}>
 //           {loading ? "Logging in..." : "Login"}
 //         </button>
+{/* <p>don't have an account.<span onClick={redirectToRegister}> Register here!</span></p> */}
 //       </form>
 //     </div>
 //   );
@@ -70,7 +75,7 @@ const Login = () => {
     // Dummy authentication (Replace with real API call)
     if (email === "abc@gmail.com" && password === "abc123") {
         localStorage.setItem("isAdminAuthenticated", "true");
-        navigate("/home"); // Redirect to dashboard
+        navigate("/app/home"); // Redirect to dashboard
       } else {
         alert("invalid credentials")
       }
@@ -96,7 +101,7 @@ const Login = () => {
         />
         <button type="submit">Login
         </button>
-      <p onClick={redirectToRegister}>don't have an account Register here!</p>
+      <p>don't have an account.<span onClick={redirectToRegister}> Register here!</span></p>
       </form>
     </div>
   );
