@@ -19,14 +19,14 @@ const AdminSidebar = () => {
       <div className="sidebar-title">Admin Panel</div>
       <ul className="sidebar-menu">
         <li>
-          <Link to="/admin/dashboard" className="li-item">
+          <Link to="/admin/app/dashboard" className="li-item">
             <img src={dashboardIcon} alt="Dashboard" className="menu-icon" />
             <span className="main-item">Dashboard</span>
           </Link>
         </li>
 
         <li>
-          <Link to="/admin/manage-users" className="li-item">
+          <Link to="/admin/app/manage-users" className="li-item">
             <img src={usersIcon} alt="Manage Users" className="menu-icon" />
             <span className="main-item">Manage Users</span>
           </Link>
@@ -56,13 +56,13 @@ const AdminSidebar = () => {
           {isDropdownHovered && (
             <ul className="dropdown-menu">
               <li>
-                <Link to="/admin/manage-chatroom" className="li-item">
+                <Link to="/admin/app/manage-chatroom" className="li-item">
                   <img src={chatroomIcon} alt="Manage Users" className="menu-icon" />
                   <span className="sub-item">Team Chatrooms</span>
                 </Link>
               </li>
               <li>
-                <Link to="/admin/manage-community-queries" className="li-item">
+                <Link to="/admin/app/manage-community-queries" className="li-item">
                   <img src={queryareaIcon} alt="Manage Users" className="menu-icon" />
                   <span className="sub-item">Help & Queries Area</span>
                 </Link>
@@ -72,7 +72,7 @@ const AdminSidebar = () => {
         </li>
 
         <li>
-          <Link to="/admin/generate-reports" className="li-item">
+          <Link to="/admin/app/generate-reports" className="li-item">
             <img
               src={reportIcon}
               alt="Generate Reports"
@@ -83,7 +83,7 @@ const AdminSidebar = () => {
         </li>
 
         <li>
-          <Link to="/admin/announcement" className="li-item">
+          <Link to="/admin/app/announcement" className="li-item">
             <img
               src={announcementIcon}
               alt="Announcement"

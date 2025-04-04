@@ -1,0 +1,181 @@
+.admin-announcement-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: calc(280px + 20px); /* Sidebar width + spacing */
+    margin-top: 120px;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: calc(100vh - 100px);
+    transition: margin-left 0.3s ease-in-out;
+    overflow-x: hidden;
+  }
+  
+  /* Message Box Container */
+  .announcement-container {
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .announcement-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .announcement-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .announcement-form label {
+    font-weight: bold;
+  }
+  
+  .announcement-form textarea {
+    resize: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .announcement-form button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .announcement-form button:disabled {
+    background: #ccc;
+  }
+  
+  .success-message {
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Announcement List Container */
+  .announcement-list-container {
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+    background: #f8f9fa;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .announcement-list-container h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+  
+  .announcement-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .announcement-item {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .announcement-text {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+    word-wrap: break-word;
+  }
+  
+  .announcement-date {
+    font-size: 14px;
+    color: #666;
+    margin-right: 15px;
+  }
+  
+  /* Consistent Button Size */
+  .delete-btn {
+    background: rgb(223, 223, 223);
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 35px;
+    text-align: center;
+  }
+  
+  .delete-btn:hover {
+    background: rgb(184, 177, 177);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .admin-announcement-page {
+      margin-left: calc(200px + 20px); /* Adjust for smaller sidebar */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .admin-announcement-page {
+      margin-left: calc(70px + 20px);
+      margin-right: 20px;
+    }
+  
+    .announcement-container,
+    .announcement-list-container {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .announcement-container,
+    .announcement-list-container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .announcement-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .announcement-date {
+      margin: 5px 0;
+    }
+  
+    .delete-btn {
+      width: 100%;
+      padding: 8px;
+    }
+  }
+  

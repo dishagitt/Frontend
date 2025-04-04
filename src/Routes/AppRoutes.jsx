@@ -6,6 +6,7 @@ import Register from "../Pages/auth/Register";
 import MainLayout from "../Pages/layouts/MainLayout";
 import AdminLayout from "../Admin/AdminPages/AdminLayout/AdminLayout";
 import AdminDashboard from "../Admin/AdminPages/adminDashboard/AdminDashboard";
+import AdminAnnouncement from "../Admin/AdminPages/adminAnnouncement/AdminAnnouncement";
 
 const AppRouter = () => {
   const isAuthenticated = localStorage.getItem("isAdminAuthenticated") === "true";
@@ -49,6 +50,7 @@ const AppRouter = () => {
           <AdminDashboard /> : 
           <Navigate to="/admin" />}
         />
+        <Route path="/admin/app/announcement" element={<AdminAnnouncement />} />
           {/* <Route path="profile" element={<Profile />} /> */}
         </Route>
 
