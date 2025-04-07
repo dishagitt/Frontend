@@ -38,7 +38,7 @@ const AdminNavbar = () => {
         >
           <img src={settingsIcon} alt="Settings" className="settings-icon" />
           <div className="settings-dropdown">
-            <div className="dropdown-item" onClick={toggleTheme}>
+            <div className="dropdown-item-admin" onClick={toggleTheme}>
               Change Theme
             </div>
           </div>
@@ -46,17 +46,17 @@ const AdminNavbar = () => {
 
         {/* Profile Section with Hover Dropdown */}
         <div
-          className="profile-section"
+          className="profile-section-admin"
           onMouseEnter={(e) => e.currentTarget.classList.add("hovered")}
           onMouseLeave={(e) => e.currentTarget.classList.remove("hovered")}
         >
           <img src={profileIcon} alt="Profile" className="profile-icon" />
-          <div className="profile-dropdown">
-            <Link to="/admin/profile" className="dropdown-item">
+          <div className="profile-dropdown-admin">
+            <Link to="/admin/profile" className="dropdown-item-admin">
               My Profile
             </Link>
-            <div className="dropdown-item">Change Password</div>
-            <Link to="/login" className="dropdown-item">Logout</Link>
+            <div className="dropdown-item-admin">Change Password</div>
+            <Link to="/admin" className="dropdown-item-admin">Logout</Link>
           </div>
         </div>
       </div>

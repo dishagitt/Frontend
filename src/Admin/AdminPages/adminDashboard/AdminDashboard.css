@@ -207,6 +207,10 @@
     color: #fff;
 }
 
+.dark-theme  .stats-box h3, .stats-box p{
+    color: white;
+}
+
 /* ==== Loading Text ==== */
 .loading {
     text-align: center;

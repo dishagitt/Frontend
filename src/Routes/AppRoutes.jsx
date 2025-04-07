@@ -1,12 +1,14 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import AdminLogin from "../Admin/AdminComponents/AdminLogin";
-import Login from "../Pages/auth/login";
-import Home from "../Pages/home/home";
+import Login from "../Pages/auth/Login";
+import Home from "../Pages/home/Home";
 import Register from "../Pages/auth/Register";
 import MainLayout from "../Pages/layouts/MainLayout";
 import AdminLayout from "../Admin/AdminPages/AdminLayout/AdminLayout";
 import AdminDashboard from "../Admin/AdminPages/adminDashboard/AdminDashboard";
 import AdminAnnouncement from "../Admin/AdminPages/adminAnnouncement/AdminAnnouncement";
+import TeamMemberRegister from "../Pages/teamLeader/TeamMemberRegister";
+import TeamInfo from "../Pages/teamLeader/TeamInfo";
 
 const AppRouter = () => {
   const isAuthenticated = localStorage.getItem("isAdminAuthenticated") === "true";
@@ -27,6 +29,14 @@ const AppRouter = () => {
         <Route
           path="/app/home"
           element={isAuthenticated ? <Home /> : <Navigate to="/login" />}
+        />
+         <Route
+          path="/app/register-team-member"
+          element={<TeamMemberRegister />}
+        />
+        <Route
+          path="/app/team-info"
+          element={<TeamInfo />}
         />
           {/* <Route path="profile" element={<Profile />} /> */}
         </Route>

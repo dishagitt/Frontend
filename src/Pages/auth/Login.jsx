@@ -62,6 +62,8 @@ import "./Login.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // const [userType, setUserType] = useState("");
+
 
   const navigate = useNavigate();
     
@@ -73,7 +75,8 @@ const Login = () => {
     e.preventDefault();
     console.log(email, password);
     // Dummy authentication (Replace with real API call)
-    if (email === "abc@gmail.com" && password === "abc123") {
+    // if (email === "abc@gmail.com" && password === "abc123" && userType === "team leader")
+    if (email === "abc@gmail.com" && password === "abc123"){
         localStorage.setItem("isAdminAuthenticated", "true");
         navigate("/app/home"); // Redirect to dashboard
       } else {
@@ -99,6 +102,14 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)} 
           required 
         />
+         {/* <select name="userType"
+         onChange={(e) => setUserType(e.target.value)}
+         required>
+          <option value="mentor">Mentor</option>
+          <option value="team leader">Team Leader</option>
+          <option value="team leader">Team Member</option>
+          <option value="volunteer">Volunteer</option>
+        </select> */}
         <button type="submit">Login
         </button>
       <p>don't have an account.<span onClick={redirectToRegister}> Register here!</span></p>

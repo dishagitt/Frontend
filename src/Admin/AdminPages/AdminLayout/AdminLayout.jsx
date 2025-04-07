@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../AdminComponents/AdminNavbar";
+import AdminNavbar from "../../AdminComponents/AdminNavbar";
 import Sidebar from "../../AdminComponents/AdminSidebar";
 import Footer from "../../AdminComponents/AdminFooter";
 import { Outlet } from "react-router-dom";
@@ -8,7 +8,7 @@ const MainLayout = () => {
 
   return (
     <div className="app-container">
-      <Navbar />
+      <AdminNavbar />
       <Sidebar />
       <div className="content">
         <main className="main-content">

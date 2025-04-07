@@ -49,6 +49,10 @@
   }
   
 
-  span:hover{
-      color: blue;
+  .register-span{
+    color: black;
+  }
+
+ .register-span:hover{
+      color: blue ;
   }

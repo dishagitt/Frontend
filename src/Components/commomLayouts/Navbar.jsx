@@ -16,15 +16,15 @@ const Navbar = ({ toggleSidebar }) => {
       </button>
 
       <div className="nav-menu">
-      <Link to="/home" className="nav-item">
+      <Link to="/app/home" className="nav-item">
         <img src={homeIcon} alt="Home" className="nav-icon" />
         <span className="nav-text">Home</span>
       </Link>
-        <Link to="/help-queries" className="nav-item">
+        <Link to="/app/help-queries" className="nav-item">
           <img src={queryIcon} alt="Help" className="nav-icon" />
           <span className="nav-text">Help & Queries</span>
         </Link>
-        <Link to="/team-chats" className="nav-item">
+        <Link to="/app/team-chats" className="nav-item">
           <img src={chatIcon} alt="Chat" className="nav-icon" />
           <span className="nav-text">Team Chats</span>
         </Link>
@@ -32,16 +32,16 @@ const Navbar = ({ toggleSidebar }) => {
 
       {/* Profile Section with Hover Dropdown */}
       <div className="nav-profile">
-        <div className="profile-container" 
+        <div className="profile-container-user" 
         onMouseEnter={(e) => e.currentTarget.classList.add("hovered")}
         onMouseLeave={(e) => e.currentTarget.classList.remove("hovered")}>
           <img src={profileIcon} alt="Profile" className="profile-icon" />
-        </div>
 
-        <div className="dropdown-menu">
-          <Link to="/profile" className="dropdown-item"> My Profile </Link>
-          <Link to="/change-password" className="dropdown-item"> Change Password</Link>
-          <Link to="/login" className="dropdown-item">Logout</Link>
+        <div className="dropdown-menu-user">
+          <Link to="/profile" className="dropdown-item-user"> My Profile </Link>
+          <Link to="/change-password" className="dropdown-item-user"> Change Password</Link>
+          <Link to="/login" className="dropdown-item-user">Logout</Link>
+        </div>
         </div>
         
       </div>

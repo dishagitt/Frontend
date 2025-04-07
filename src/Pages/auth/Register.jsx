@@ -116,15 +116,16 @@ const redirectToLogin = () =>{
         <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
 
         <select name="userType" value={formData.userType} onChange={handleChange} required>
-          <option value="team leader">Team Leader</option>
-          <option value="volunteer">Volunteer</option>
           <option value="mentor">Mentor</option>
+          <option value="team leader">Team Leader</option>
+          <option value="team member">Team Member</option>
+          <option value="volunteer">Volunteer</option>
         </select>
 
         <button type="submit">
           Register
         </button>
-        <p>already have an account.<span onClick={redirectToLogin}> Login here!</span></p>
+        <p>already have an account.<span className="register-span" onClick={redirectToLogin}> Login here!</span></p>
       </form>
     </div>
   );

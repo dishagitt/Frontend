@@ -4,7 +4,8 @@ import "./Styles/AdminSidebar.css";
 import dashboardIcon from "../../assets/analysis.png";
 import usersIcon from "../../assets/user.png";
 import chatIcon from "../../assets/chat.png";
-import reportIcon from "../../assets/bill.png";
+import reportIcon from "../../assets/bill2.png";
+import billIcon from "../../assets/bill.png";
 import announcementIcon from "../../assets/announcement.png";
 import dropdownArrow from "../../assets/down-arrow.png";
 import chatroomIcon from "../../assets/chat2.png";
@@ -90,6 +91,17 @@ const AdminSidebar = () => {
               className="menu-icon"
             />
             <span className="main-item">Announcement</span>
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/admin/app/requirement-bills" className="li-item">
+            <img
+              src={billIcon}
+              alt="Requirement Bills"
+              className="menu-icon"
+            />
+            <span className="main-item">Requirement Bills</span>
           </Link>
         </li>
       </ul>

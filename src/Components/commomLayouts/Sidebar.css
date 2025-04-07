@@ -44,6 +44,10 @@
     padding: 0;
 }
 
+.close-button img{
+    width: 25px;
+}
+
 .close-button:hover {
     color: #ff4d4d;
     background-color: transparent;
@@ -60,7 +64,6 @@
 .user-sidebar-menu li {
     padding: 15px 20px;
     height: 24px;
-    /* background-color: #095858; */
     transition: background 0.3s;
     background: linear-gradient(to bottom, #015760, #018383);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
@@ -73,10 +76,11 @@
     text-decoration: none;
     display: block;
     font-size: 18px;
+    height: 24px;
 }
 
 /* Hover Effect */
-.user-sidebar-menu li:hover {
+.user-sidebar .user-sidebar-menu li:hover {
     background-color: #036d62 !important;
     cursor: pointer;
 }

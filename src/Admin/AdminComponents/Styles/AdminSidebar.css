@@ -133,7 +133,7 @@
 .dropdown-menu li:hover {
   background: #36608f;
   padding-left: 24px;
-  border-radius: 4px;
+  border-radius: 4px; 
 }
 
 /* Border for dropdown items */
@@ -145,6 +145,10 @@
 .dropdown:hover + li {
   margin-top: 90px;
   transition: margin-top 0.3s ease-in-out;
+}
+
+.main-item:hover , .sub-item:hover{
+  color: white;
 }
 
 /* ==== Responsive Design ==== */
