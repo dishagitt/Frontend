@@ -10,6 +10,7 @@ import announcementIcon from "../../assets/announcement.png";
 import dropdownArrow from "../../assets/down-arrow.png";
 import chatroomIcon from "../../assets/chat2.png";
 import queryareaIcon from "../../assets/query.png";
+import userRoleIcon from "../../assets/team.png";
 
 
 const AdminSidebar = () => {
@@ -102,6 +103,16 @@ const AdminSidebar = () => {
               className="menu-icon"
             />
             <span className="main-item">Requirement Bills</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/admin/app/user-types" className="li-item">
+            <img
+              src={userRoleIcon}
+              alt="user roles"
+              className="menu-icon"
+            />
+            <span className="main-item">Manage User Roles</span>
           </Link>
         </li>
       </ul>

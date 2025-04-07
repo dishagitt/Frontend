@@ -9,6 +9,7 @@ import AdminDashboard from "../Admin/AdminPages/adminDashboard/AdminDashboard";
 import AdminAnnouncement from "../Admin/AdminPages/adminAnnouncement/AdminAnnouncement";
 import TeamMemberRegister from "../Pages/teamLeader/TeamMemberRegister";
 import TeamInfo from "../Pages/teamLeader/TeamInfo";
+import AddUserType from "../Admin/AdminPages/userRoles/AddUserType";
 
 const AppRouter = () => {
   const isAuthenticated = localStorage.getItem("isAdminAuthenticated") === "true";
@@ -26,20 +27,24 @@ const AppRouter = () => {
        {/* Routes that use MainLayout (With Sidebar/Navbar/Footer) */}
        <Route path="/app" element={<MainLayout />}>
            {/* Protected User Home page Route */}
-        <Route
-          path="/app/home"
-          element={isAuthenticated ? <Home /> : <Navigate to="/login" />}
-        />
-         <Route
-          path="/app/register-team-member"
-          element={<TeamMemberRegister />}
-        />
-        <Route
-          path="/app/team-info"
-          element={<TeamInfo />}
-        />
-          {/* <Route path="profile" element={<Profile />} /> */}
-        </Route>
+          <Route
+            path="/app/home"
+            element={isAuthenticated ? <Home /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/app/register-team-member"
+            element={<TeamMemberRegister />}
+          />
+          <Route
+            path="/app/team-info"
+            element={<TeamInfo />}
+          />
+      
+      </Route>
+
+
+
+
 
 
 
@@ -54,15 +59,17 @@ const AppRouter = () => {
 
         <Route path="/admin/app" element={<AdminLayout />}>
            {/* Protected User Home page Route */}
-        <Route
-          path="/admin/app/dashboard"
-          element={isAuthenticated ? 
-          <AdminDashboard /> : 
-          <Navigate to="/admin" />}
-        />
-        <Route path="/admin/app/announcement" element={<AdminAnnouncement />} />
-          {/* <Route path="profile" element={<Profile />} /> */}
+            <Route
+              path="/admin/app/dashboard"
+              element={isAuthenticated ? 
+              <AdminDashboard /> : 
+              <Navigate to="/admin" />}
+            />
+            <Route path="/admin/app/announcement" element={<AdminAnnouncement />} />
+            <Route path="/admin/app/user-types" element={<AddUserType />} />
+            {/* <Route path="profile" element={<Profile />} /> */}
         </Route>
+       
 
         {/* Default Redirect (Optional) */}
         {/* <Route path="*" element={<Navigate to="/admin/login" />} /> */}
