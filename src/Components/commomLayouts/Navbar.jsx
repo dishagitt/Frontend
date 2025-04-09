@@ -5,8 +5,20 @@ import queryIcon from "../../assets/query.png";
 import chatIcon from "../../assets/chat.png";
 import profileIcon from "../../assets/user1.png";
 import menuIcon from "../../assets/sidebar-icon.png";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { logoutUser } from "../../Redux/slices/authSlice";
 
 const Navbar = ({ toggleSidebar }) => {
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+
+  const handleLogout = () => {
+    dispatch(logoutUser());                // Clear Redux and localStorage
+    navigate("/admin");               // Redirect to login
+  };
 
   return (
     <nav className="navbar">
@@ -40,7 +52,9 @@ const Navbar = ({ toggleSidebar }) => {
         <div className="dropdown-menu-user">
           <Link to="/profile" className="dropdown-item-user"> My Profile </Link>
           <Link to="/change-password" className="dropdown-item-user"> Change Password</Link>
-          <Link to="/login" className="dropdown-item-user">Logout</Link>
+          <div className="dropdown-item-user" onClick={handleLogout}>
+              Logout
+          </div>
         </div>
         </div>
         

@@ -1,28 +1,43 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Styles/AdminNavbar.css";
 import profileIcon from "../../assets/user.png";
-import settingsIcon from "../../assets/settings.png";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { logoutUser } from "../../Redux/slices/authSlice.js";
+// import settingsIcon from "../../assets/settings.png";
 
 const AdminNavbar = () => {
-  const toggleTheme = () => {
-    const body = document.body;
-    body.classList.toggle("dark-theme");
 
-    // Store theme preference in localStorage
-    if (body.classList.contains("dark-theme")) {
-      localStorage.setItem("theme", "dark");
-    } else {
-      localStorage.setItem("theme", "light");
-    }
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+
+  const handleLogout = () => {
+    dispatch(logoutUser());                // Clear Redux and localStorage
+    navigate("/admin");               // Redirect to login
   };
 
+
+  // const toggleTheme = () => {
+  //   const body = document.body;
+  //   body.classList.toggle("dark-theme");
+
+  //   // Store theme preference in localStorage
+  //   if (body.classList.contains("dark-theme")) {
+  //     localStorage.setItem("theme", "dark");
+  //   } else {
+  //     localStorage.setItem("theme", "light");
+  //   }
+  // };
+
   // Check and apply theme on load
-  useEffect(() => {
-    if (localStorage.getItem("theme") === "dark") {
-      document.body.classList.add("dark-theme");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (localStorage.getItem("theme") === "dark") {
+  //     document.body.classList.add("dark-theme");
+  //   }
+  // }, []);
 
   return (
     <nav className="admin-navbar">
@@ -31,7 +46,7 @@ const AdminNavbar = () => {
         <input type="text" className="admin-search" placeholder="Search..." />
 
         {/* Settings Section with Hover Dropdown */}
-        <div
+        {/* <div
           className="settings-section"
           onMouseEnter={(e) => e.currentTarget.classList.add("hovered")}
           onMouseLeave={(e) => e.currentTarget.classList.remove("hovered")}
@@ -42,7 +57,7 @@ const AdminNavbar = () => {
               Change Theme
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Profile Section with Hover Dropdown */}
         <div
@@ -56,7 +71,9 @@ const AdminNavbar = () => {
               My Profile
             </Link>
             <div className="dropdown-item-admin">Change Password</div>
-            <Link to="/admin" className="dropdown-item-admin">Logout</Link>
+            <div className="dropdown-item-admin" onClick={handleLogout}>
+              Logout
+            </div>
           </div>
         </div>
       </div>

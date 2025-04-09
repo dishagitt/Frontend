@@ -104,7 +104,7 @@
 
 /* Dark Theme Navbar */
 
-.dark-theme .admin-navbar {
+/* .dark-theme .admin-navbar {
   background-color: #1e293b;
   color: white;
 }
@@ -128,7 +128,7 @@
 
 .dark-theme .dropdown-item-admin:hover {
   background: #334155;
-}
+} */
 
 /* ==== Responsive Design ==== */
 @media (max-width: 1024px) {

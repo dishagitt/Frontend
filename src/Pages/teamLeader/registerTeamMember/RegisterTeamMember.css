@@ -1,0 +1,114 @@
+.team-member-register-page {
+    max-width: 1200px;
+    margin: 80px auto 40px; /* Top spacing for navbar */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+  }
+  
+  /* Heading */
+  .team-member-register-page h1,
+  .team-member-list h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  /* Table Section */
+  .team-member-list {
+    margin-top: 40px;
+    overflow-x: auto;
+  }
+  
+  .team-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  .team-table th,
+  .team-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .team-table th {
+    background-color: #f4f4f4;
+    font-weight: 600;
+  }
+  
+  .team-table tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  /* Buttons */
+  .edit-user-btn,
+  .del-btn {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-user-btn {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .edit-user-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .del-btn {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .del-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .team-member-register-page {
+      padding: 15px;
+    }
+  
+    .team-table th,
+    .team-table td {
+      padding: 10px;
+      font-size: 0.95rem;
+    }
+  
+    .edit-user-btn,
+    .del-btn {
+      padding: 5px 10px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .team-member-register-page h1,
+    .team-member-list h2 {
+      font-size: 1.5rem;
+    }
+  
+    .edit-user-btn,
+    .del-btn {
+      display: block;
+      margin: 6px 0;
+      width: 100%;
+    }
+  
+    .team-table th,
+    .team-table td {
+      font-size: 0.9rem;
+    }
+  }
+  

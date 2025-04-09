@@ -60,7 +60,7 @@
 }
 
 /* ==== Login Button ==== */
-button {
+.login-btn {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -72,7 +72,7 @@ button {
     transition: background 0.3s ease-in-out;
 }
 
-button:hover {
+.login-btn:hover {
     background-color: #0056b3;
 }
 
